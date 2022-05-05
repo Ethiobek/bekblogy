@@ -41,10 +41,10 @@ export const Rightbar = () => {
         >
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
-              <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+              <Avatar alt="Rediet Solomon" src="" />
             </ListItemAvatar>
             <ListItemText
-              primary="Brunch this weekend?"
+              primary="Virtual Reality"
               secondary={
                 <React.Fragment>
                   <Typography
@@ -53,9 +53,9 @@ export const Rightbar = () => {
                     variant="body2"
                     color="text.primary"
                   >
-                    Ali Connors
+                    Rediet Solomon
                   </Typography>
-                  {" — I'll be in your neighborhood doing errands this…"}
+                  {" — I like your posts, they are alot to me…"}
                 </React.Fragment>
               }
             />
@@ -63,10 +63,10 @@ export const Rightbar = () => {
           <Divider variant="inset" component="li" />
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
-              <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
+              <Avatar alt="Temesgen Beamlak" src="" />
             </ListItemAvatar>
             <ListItemText
-              primary="Summer BBQ"
+              primary="ETHIO-JET 444"
               secondary={
                 <React.Fragment>
                   <Typography
@@ -75,9 +75,11 @@ export const Rightbar = () => {
                     variant="body2"
                     color="text.primary"
                   >
-                    to Scott, Alex, Jennifer
+                    Temesgen Beamlak
                   </Typography>
-                  {" — Wish I could come, but I'm out of town this…"}
+                  {
+                    " — I wish I could see more posts about airoscience from you…"
+                  }
                 </React.Fragment>
               }
             />
@@ -85,7 +87,7 @@ export const Rightbar = () => {
           <Divider variant="inset" component="li" />
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
-              <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
+              <Avatar alt="Crstian Debebe" src="" />
             </ListItemAvatar>
             <ListItemText
               primary="Oui Oui"
@@ -97,9 +99,11 @@ export const Rightbar = () => {
                     variant="body2"
                     color="text.primary"
                   >
-                    Sandra Adams
+                    Crstian Debebe
                   </Typography>
-                  {" — Do you have Paris recommendations? Have you ever…"}
+                  {
+                    " — What do you think about making Ethiopian's food more international…"
+                  }
                 </>
               }
             />

@@ -14,11 +14,11 @@ import {
 import React from "react";
 export const Post = () => {
   return (
-    <Box bgcolor="whitesmoke" p={2} flex={4}>
-      <Card sx={{ maxWidth: 650 }}>
+    <Box p={2} flex={4} bgcolor={"background.default"}>
+      <Card sx={{ maxWidth: 600 }}>
         <CardHeader
           avatar={
-            <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
+            <Avatar sx={{ bgcolor: "red" }} aria-label="technology">
               B
             </Avatar>
           }

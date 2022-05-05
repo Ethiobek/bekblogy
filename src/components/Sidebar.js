@@ -5,6 +5,7 @@ import {
   ElectricCar,
   Flight,
   Info,
+  Menu,
   RestaurantMenu,
 } from "@mui/icons-material";
 import {
@@ -18,8 +19,22 @@ import * as React from "react";
 
 export const Sidebar = () => {
   return (
-    <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
+    <Box
+      flex={1}
+      p={2}
+      sx={{
+        display: { xs: "none", sm: "block" },
+      }}
+    >
       <Box sx={{ position: "fixed" }}>
+        <Menu
+          sx={{
+            display: {
+              xs: "flex",
+              sm: "none",
+            },
+          }}
+        />
         <List
           sx={{
             width: "100%",
@@ -62,9 +77,9 @@ export const Sidebar = () => {
           </ListItemButton>
           <ListItemButton>
             <ListItemIcon>
-              <Flight sx={{ color: "#082a45" }} />
+              <Flight />
             </ListItemIcon>
-            <ListItemText primary="Airoscience" sx={{ color: "#082a45" }} />
+            <ListItemText primary="Airoscience" />
           </ListItemButton>
           <ListItemButton>
             <ListItemIcon>
