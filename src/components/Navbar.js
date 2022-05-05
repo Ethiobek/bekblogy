@@ -89,7 +89,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
-    <AppBar position="sticky">
+    <AppBar position="sticky" sx={{ backgroundColor: "#082a45" }}>
       <StyledToolbar>
         <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
           BEKBLOG
