@@ -6,6 +6,7 @@ import { DarkMode } from "./components/DarkMode";
 import { Feed } from "./components/Feed";
 import { Navbar } from "./components/Navbar";
 import { Rightbar } from "./components/Rightbar";
+import { Sidebar2 } from "./components/Sidebar2";
 import { Sidebar } from "./components/Sidebar";
 
 function App() {
