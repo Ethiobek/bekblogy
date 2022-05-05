@@ -13,11 +13,9 @@ import {
 import React, { useState } from "react";
 import {
   Add as AddIcon,
-  DateRange,
   EmojiEmotions,
   Image,
   PersonAdd,
-  Send,
   Timer,
   VideoCameraBack,
 } from "@mui/icons-material";
