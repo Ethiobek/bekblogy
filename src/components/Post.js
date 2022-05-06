@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 import axios from "../api/axios";
 import React, { useEffect, useState } from "react";
+import Moment from "react-moment";
 export const Post = () => {
   const [posts, setPosts] = useState([]);
 
@@ -33,7 +34,7 @@ export const Post = () => {
   return (
     <Box p={2} flex={4} bgcolor={"background.default"}>
       {posts.map((post) => (
-        <Card key={post.id} sx={{ maxWidth: 600 }}>
+        <Card key={post.id} sx={{ maxWidth: 600, marginBottom: "10px" }}>
           <CardHeader
             avatar={
               <Avatar
@@ -48,7 +49,9 @@ export const Post = () => {
               </IconButton>
             }
             title={post.firstName + " " + post.lastName}
-            subheader={post.postDate}
+            subheader={
+              <Moment format="MMMM Do YYYY, h:mm:ss a">{post.postDate}</Moment>
+            }
           />
           <CardMedia
             component="img"
