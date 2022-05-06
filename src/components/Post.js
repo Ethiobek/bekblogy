@@ -11,48 +11,66 @@ import {
   IconButton,
   Typography,
 } from "@mui/material";
-import React from "react";
+import axios from "../api/axios";
+import React, { useEffect, useState } from "react";
 export const Post = () => {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const request = await axios.get("/post");
+        setPosts(request.data);
+        console.log("result setted");
+        return request;
+      } catch (e) {
+        console.log("Log Error : " + e);
+      }
+    }
+    fetchData();
+  }, [setPosts]);
+  console.log(posts);
   return (
     <Box p={2} flex={4} bgcolor={"background.default"}>
-      <Card sx={{ maxWidth: 600 }}>
-        <CardHeader
-          avatar={
-            <Avatar sx={{ bgcolor: "red" }} aria-label="technology">
-              B
-            </Avatar>
-          }
-          action={
-            <IconButton aria-label="settings">
-              <MoreVert />
+      {posts.map((post) => (
+        <Card key={post.id} sx={{ maxWidth: 600 }}>
+          <CardHeader
+            avatar={
+              <Avatar
+                src={post.profilePic}
+                sx={{ bgcolor: "black" }}
+                aria-label="technology"
+              ></Avatar>
+            }
+            action={
+              <IconButton aria-label="settings">
+                <MoreVert />
+              </IconButton>
+            }
+            title={post.firstName + " " + post.lastName}
+            subheader={post.postDate}
+          />
+          <CardMedia
+            component="img"
+            height="20%"
+            image={post.postImage}
+            alt={post.postContent}
+          />
+          <CardContent>
+            <Typography align="justify" variant="body2" color="text.secondary">
+              {post.postContent}
+            </Typography>
+          </CardContent>
+          <CardActions disableSpacing>
+            <IconButton aria-label="add to favorites">
+              <Favorite />
             </IconButton>
-          }
-          title="Bereket Zergaw"
-          subheader="September 14, 2022"
-        />
-        <CardMedia
-          component="img"
-          height="20%"
-          image="https://images.pexels.com/photos/834949/pexels-photo-834949.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          alt="Virtual Reality"
-        />
-        <CardContent>
-          <Typography variant="body2" color="text.secondary">
-            Virtual Reality (VR) is a computer-generated environment with scenes
-            and objects that appear to be real, making the user feel they are
-            immersed in their surroundings. This environment is perceived
-            through a device known as a Virtual Reality headset or helmet.
-          </Typography>
-        </CardContent>
-        <CardActions disableSpacing>
-          <IconButton aria-label="add to favorites">
-            <Favorite />
-          </IconButton>
-          <IconButton aria-label="share">
-            <Share />
-          </IconButton>
-        </CardActions>
-      </Card>
+            <IconButton aria-label="share">
+              <Share />
+            </IconButton>
+          </CardActions>
+        </Card>
+      ))}
     </Box>
   );
 };
